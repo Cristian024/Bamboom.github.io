@@ -378,7 +378,16 @@ h4 {
 		width: 90%;
 	}
 
+	#d1 {
+		font-size: 6vh;
+		margin-top: 10%;
+		text-align: center;
+		background-size: 100%;
+		background-position-y: -10%;
+	}
+
 	#ti1 {
+		font-size: 7vh;
 		width: 25%;
 	}
 
@@ -392,7 +401,8 @@ h4 {
 	#d1 {
 		text-align: center;
 		background: fixed no-repeat url(../Imagenes/0bdae875-bc7a-4a2a-b7ab-c28a9e45e2de.jpg);
-		background-size: 100%;
+		background-size: 120%;
+		font-size: 5vh;
 	}
 
 	#d1 div {
@@ -401,7 +411,8 @@ h4 {
 	}
 
 	#ti1 {
-		width: 30%;
+		width: 25%;
+		font-size: 5vh;
 	}
 
 	#modelViewer {
@@ -419,22 +430,44 @@ h4 {
 
 @media (max-width: 650px) {
 
+	#d1{
+		padding-top: 3%;
+		font-size: 5vh;
+		background-position-y: 1%;
+	}
+
 	#ti1 {
+		font-size: 5vh;
 		width: 30%;
 	}
 }
 
 @media (max-width: 600px) {
 
+	#d1{
+		background-size: 120%;
+		background-position-y: 10%;
+		font-size: 4vh;
+	}
+
 	#ti1 {
-		width: 35%;
+		font-size: 4vh;
+		width: 25%;
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 490px) {
+
+	#d1{
+		font-size: 3vh;
+		background-size: 120%;
+		background-position-y: 10%;
+	}
+
 
 	#ti1 {
-		width: 35%;
+		font-size: 3vh;
+		width: 25%;
 	}
 }
 
