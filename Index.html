@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Estilos/Styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Estilos/Styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <header>
+
+        <a href="#" class="logo"><img src="Imagenes/Bamboom logo-01.png"></a>
+
+        <div class="textoheader">
+            <ul class="navbar">
+                <li><a href="#" class="active">Welcome</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Briefcase</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <a href="#" class="user"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="user"><i class="fa fa-instagram"></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+
+    <div id="d1">
+        <div>
+            <h2 id="ti1">Casa</h2>
+            <h2 id="ti2">Casa de las Olas</h2>
+        </div>
+    </div>
+
+    <div id="model-info">
+        <div id="modv">
+            <model-viewer id="modelViewer" src="Imagenes/ModeloDePrueba.glb" alt="Model Viewer example"
+                poster="Imagenes/Bamboom logo-01 - copia.png" shadow-intensity="1" shadow-softness="0.25"
+                camera-controls ar>
+                <div id="tuto" style="opacity: 0; transition: 1s; visibility: hidden;">
+
+                </div>
+                <span class="material-symbols-outlined" id="pantallacompleta"
+                    onclick="pantallacompleta()">fullscreen</span>
+                <span class="material-symbols-outlined" id="tutorial" onclick="tutorial()" style="transition: 1s;">
+                    question_mark
+                </span>
+            </model-viewer>
+        </div>
+        <div id="divespa"></div>
+        <div id="nose">
+            <div style="width: 100%;">
+                <span class="top-border"></span>
+                <div id="info">
+                    <br><br>
+                    <div id="ifd1">
+                        <h2>Materiales</h2>
+                        <h3>- Bamboo</h3>
+                        <h3>- Sedimentos Varios</h3>
+                        <h3>- Ventanales</h3>
+                        <br>
+                    </div>
+                    <div id="ifd2">
+                        <h2>Tiempo de construcción</h2>
+                        <h3>1 Mes</h3>
+                        <br>
+                    </div>
+                    <div id="ifd3">
+                        <h2>Coste</h2>
+                        <h3>COP 1'250.000$</h3>
+                        <br>
+                    </div>
+                    <div id="ifd4">
+                        <h2>Altura</h2>
+                        <h3>3 metros</h3>
+                        <br>
+                    </div>
+                    <div id="ifd5">
+                        <h2>Ancho</h2>
+                        <h3>20 metros</h3>
+                        <br>
+                    </div>
+                </div>
+                <span class="Bottom-border"></span>
+            </div>
+        </div>
+
+
+    </div>
+    <br><br>
+    <div id="overview">
+        <h1>Overview</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus ipsa amet quidem, placeat eaque quos
+            nostrum sunt quaerat, magni animi, asperiores reprehenderit laborum quo tempora. Corrupti eligendi fuga
+            harum in eos voluptate commodi expedita, reprehenderit eveniet sequi laudantium necessitatibus dolore quos,
+            rem autem soluta culpa quia nesciunt, voluptatum sit non! Deserunt eum natus adipisci voluptas ullam, neque
+            est fugit culpa nihil numquam quod sunt error illo minus, nam commodi perferendis!</p>
+    </div>
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <script type="text/javascript" src="Logica/Logic.js"></script>
+</body>
+
+</html>
