@@ -376,11 +376,12 @@ h4 {
 
 	#d1 {
 		font-size: 6vh;
-		padding-top: 2%;
-		padding-bottom: 2%;
 		text-align: center;
 		background-size: 100%;
 		background-position-y: 60%;
+	}
+	#d1 div{
+		padding-top: 10%;
 	}
 
 	#ti1 {
@@ -400,16 +401,15 @@ h4 {
 
 @media (max-width: 725px) {
 	#d1 {
-		padding-top: 3%;
-		padding-bottom: 1%;
 		text-align: center;
 		background: fixed no-repeat url(../Imagenes/0bdae875-bc7a-4a2a-b7ab-c28a9e45e2de.jpg);
 		background-size: 120%;
-		background-position-y: 50%;
+		background-position-y: 30%;
 		font-size: 5vh;
 	}
 
 	#d1 div {
+		padding-top: 15%;
 		width: 100%;
 		height: 10%;
 	}
@@ -433,13 +433,14 @@ h4 {
 }
 
 @media (max-width: 650px) {
+	#d1 div{
+		padding-top: 15%;
+		padding-bottom: 5%;
+	}
 
 	#d1 {
-		padding-top: 10%;
-		padding-bottom: 5%;
-		padding-top: 3%;
 		font-size: 5vh;
-		background-position-y: 1%;
+		background-position-y: 30%;
 	}
 
 	#ti1 {
@@ -449,13 +450,15 @@ h4 {
 }
 
 @media (max-width: 600px) {
-
 	#d1 {
-		padding-top: 10%;
-		padding-bottom: 2%;
 		background-size: 120%;
-		background-position-y: -30%;
+		background-position-y: -50%;
 		font-size: 4vh;
+	}
+
+	#d1 div{
+		padding-top: 20%;
+		padding-bottom: 10%;
 	}
 
 	#ti1 {
@@ -467,13 +470,15 @@ h4 {
 @media (max-width: 490px) {
 
 	#d1 {
-		padding-top: 15%;
-		padding-bottom: 5%;
 		font-size: 3vh;
 		background-size: 120%;
 		background-position-y: -15%;
 	}
 
+	#d1 div{
+		padding-top: 20%;
+		padding-bottom: 10%;
+	}
 
 	#ti1 {
 		font-size: 3vh;
