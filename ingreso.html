@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Estilos/Styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Estilos/Ingreso.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
+</head>
+
+<body onload="cargar()">
+    <div id="cabecera">
+        <img src="/Imagenes/Bamboom logo-01 - copia.png" alt="">
+    </div>
+    <br>
+    <div id="contenedor">
+        <div>
+            <h1>Titulo de la construcción</h1>
+            <input type="text" id="titulo">
+        </div>
+        <div id="materiales">
+            <h1>Materiales</h1>
+        </div>
+        <div>
+            <h1>Tiempo de construcción</h1>
+            <input type="text" id="tiempo">
+        </div>
+        <div>
+            <h1>Coste</h1>
+            <input type="text" id="coste">
+        </div>
+        <div>
+            <h1>Altura</h1>
+            <input type="text" id="altura">
+            <h1>Ancho</h1>
+            <input type="text" id="ancho">
+        </div>
+        <div>
+            <h1>Descripción</h1>
+            <textarea id="descripcion" cols="72" rows="25"></textarea>
+        </div>
+    </div>
+    <br><br>
+    <h1 style="margin: auto; text-align: center; border-bottom: solid white; width: 30%; font-size: 40px;">Imagenes</h1>
+    <br><br>
+    <div id="ingresimg">
+        <div>
+            <div id="ingimg">
+                <input type="file" id="fileimage">
+                <button onclick="cargarimg()" id="cargar">Cargar</button>
+            </div>
+            <div id="imgmos"></div>
+        </div>
+        <div class="inputnor" id="inputsimg">
+            <h2 id="numimagen">Imagen</h2>
+            <p id="posx">Posición X: 0</p>
+            <input type="range" class="range" id="posicionx" value="50" min="-100" max="100"
+                onmousemove="rangeSlider(this)" onchange="rangeSlider(this)">
+            <p id="posy">Posición Y: 0</p>
+            <input type="range" class="range" id="posiciony" value="50" min="-100" max="100"
+                onmousemove="rangeSlider(this)" onchange="rangeSlider(this)">
+            <p id="tam">Tamaño: 0</p>
+            <input type="range" class="range" id="tamano" value="100" min="50" max="300" onmousemove="rangeSlider(this)"
+                onchange="rangeSlider(this)">
+            <div style="display: flex">
+                <label>Posición:
+                    <input type="text" id="posicion" style="width: auto;" onchange="cambiopos(this)">
+                </label>
+
+            </div>
+        </div>
+    </div>
+    <div id="imagenescontenedor">
+        <div id="imagenes">
+
+        </div>
+    </div>
+    <br><br>
+    <div id="modelcont">
+        <h2>Modelo 3D</h2>
+        <br><br>
+        <input type="file">
+        <model-viewer id="modelViewer" src="Imagenes/ModeloDePrueba.glb" alt="Model Viewer example"
+            poster="Imagenes/Bamboom logo-01 - copia.png" shadow-intensity="1" shadow-softness="0.25" camera-controls
+            ar>
+
+        </model-viewer>
+    </div>
+    <br><br>
+    <div style="width: 100%; display:flex; justify-content: center;">
+        <button onclick="editar()" id="editar">Editar</button>
+    </div>
+    <br><br>
+    <div id="slider">
+        <img src="/Imagenes/Construcción1-2.jpeg" class="slide">
+        <img src="/Imagenes/Construcción1-3.jpeg" class="slide">
+        <img src="/Imagenes/Construcción1-4.jpeg" class="slide">
+      </div>
+      
+      <div id="nav">
+        <button id="prev">prev</button>
+        <button id="next">next</button>
+      </div>  
+
+    </div>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script src="Logica/Redimencionar.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+
+
+    </script>
+    <script src="Logica/Configuración.js"></script>
+    <script type="text/javascript" src="Logica/Editar.js"></script>
+
+
+</body>
+
+</html>
