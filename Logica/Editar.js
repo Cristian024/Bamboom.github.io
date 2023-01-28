@@ -315,38 +315,8 @@ function scrollimgpan() {
   }
 }
 
-function CargarModelo(){
-  
-}
 
-let slideIndex = 0;
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("slide");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.left = "-100%";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  slides[slideIndex - 1].style.left = "0";
-}
-
-setInterval(showSlides, 5000);
-
-let prev = document.getElementById("prev");
-let next = document.getElementById("next");
-
-prev.addEventListener("click", function() {
-  slideIndex -= 2;
-  showSlides();
-});
-
-next.addEventListener("click", function() {
-  showSlides();
-});
 
 
 
