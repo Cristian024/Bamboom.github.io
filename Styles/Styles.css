@@ -19,14 +19,14 @@
 
 @font-face{
     font-family: 'Arista-Pro';
-    src: url(fonts/Arista-Pro-Light-trial.ttf) format('truetype');
+    src: url(/Bamboom.github.io/fonts/Arista-Pro-Light-trial.ttf) format('truetype');
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face{
     font-family: 'Almarose';
-    src: url(fonts/Almarose-Regular.otf) format('truetype');
+    src: url(/Bamboom.github.io/fonts/Almarose-Regular.otf) format('truetype');
     font-style: normal;
     font-weight: normal;
 }
@@ -127,7 +127,7 @@ header {
 .menuinicio {
     height: 725px;
     width: 100%;
-    background: url(Images/slide-01-1173x722.jpg);
+    background: url(/Bamboom.github.io/Images/slide-01-1173x722.jpg);
     background-size: 100%;
 }
 
